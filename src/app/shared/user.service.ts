@@ -9,7 +9,7 @@ import { User } from '../user.model';
   providedIn: 'root'
 })
 export class UserService {
-  readonly rootUrl = '';
+  readonly rootUrl = 'http://jsonplaceholder.typicode.com/';
   constructor(private http: HttpClient) { }
 
   registerUser(user: User){

@@ -3,6 +3,8 @@ import { User } from '../user.model';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../shared/user.service';
 
+import { ToastrService, Toast } from 'ngx-toastr';
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -11,7 +13,7 @@ import { UserService } from '../shared/user.service';
 export class SignUpComponent implements OnInit {
   user: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
